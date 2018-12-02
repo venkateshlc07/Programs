@@ -1,7 +1,6 @@
 /* Given Array of Characters convert each letter into gOOGLE cASE */
 #include<bits/stdc++.h>
 #include<string.h>
-#define SUM 8
 #define IN 1
 #define OUT 0
 
