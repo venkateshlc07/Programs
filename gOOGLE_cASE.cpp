@@ -8,24 +8,25 @@ using namespace std;
 int main()
 {
    char ch[] ="C is a Sea";
-   int state = OUT;
-   char space='a';
-   int char=0;
-
+   int state;
+   int char;
+	
+   char = 0;
+   state = OUT; 
    while(ch[char] != '\0')
    {
       if(ch[char] == ' ' || ch[char] == '\t' || ch[char] =='\n'){
-        	state = OUT;
+        state = OUT;
       }
       else if(state == OUT){
-        	state = IN;
-        	ch[char] = tolower(ch[char]);
+        state = IN;
+        ch[char] = tolower(ch[char]);
       }
       else{
-        	ch[char] = toupper(ch[char]);
+        ch[char] = toupper(ch[char]);
       }
 
-      ++char;
+        ++char;
 		
    }
 
