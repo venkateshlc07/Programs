@@ -9,27 +9,26 @@ int main()
 {
    char ch[] ="C is a Sea";
    int state;
-   int char;
+   int c;
 	
-   char = 0;
+   c = 0;
    state = OUT; 
-   while(ch[char] != '\0')
+   while(ch[c] != '\0')
    {
-      if(ch[char] == ' ' || ch[char] == '\t' || ch[char] =='\n'){
+      if(ch[c] == ' ' || ch[c] == '\t' || ch[c] =='\n'){
         state = OUT;
       }
       else if(state == OUT){
         state = IN;
-        ch[char] = tolower(ch[char]);
+        ch[c] = tolower(ch[c]);
       }
       else{
-        ch[char] = toupper(ch[char]);
+        ch[c] = toupper(ch[c]);
       }
 
-        ++char;
+        ++c;
 		
    }
 
     cout<<ch;
-
 }
